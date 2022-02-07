@@ -1,0 +1,69 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int a = sc.nextInt();
+		int b = 300;
+		int c = 60;
+		int d = 10;
+		int sum = a;
+		int count1 = 0;
+		int count2 = 0;
+		int count3 = 0;
+		while (true) 
+		{
+			while (true) 
+			{
+				while (true) 
+				{
+					if(sum%d!=0)
+					{
+						break;
+						
+					}
+					if (sum < b) 
+					{
+						break;
+					}
+					sum = sum - b;
+					count1++;
+					
+				}
+				if(sum%d!=0)
+				{
+					break;
+					
+				}
+				if (sum < c) 
+				{
+					break;
+				}
+				sum = sum - c;
+				count2++;
+				
+			}
+			if(sum%d!=0)
+			{
+				System.out.println(-1);
+				break;
+				
+			}
+			if (sum < d) 
+			{
+				break;
+			}
+			sum = sum - d;
+			count3++;
+		}
+		if(sum%d==0)
+		{
+			System.out.println(count1+" "+count2+" "+count3);
+		}
+		
+	}
+}
+/* a=5분 b=1분 c=10초 */
