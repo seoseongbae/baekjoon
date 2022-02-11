@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a=sc.nextInt();
+		int b;
+		int young=0;
+		int min=0;
+		for (int i = 0; i < a; i++) {
+            b = sc.nextInt();
+            young += ((b / 30) + 1) * 10;
+            min += ((b / 60) + 1) * 15;
+		}
+		if(young==min)
+		{
+			System.out.println("Y M "+young);
+		}
+		else if(young<min)
+		{
+			System.out.println("Y "+young);
+		}
+		else if(young>min)
+		{
+			System.out.println("M "+min);
+		}
+	}
+}
