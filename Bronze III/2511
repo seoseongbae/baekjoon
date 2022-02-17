@@ -1,0 +1,70 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+public class Main {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		int[] arr=new int[10];
+		int[] brr=new int[10];
+		int acount=0,bcount=0,dcount=0;;
+		int count=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		for(int i=0;i<arr.length;i++)
+		{
+			brr[i]=sc.nextInt();
+		}
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]>brr[i])
+			{
+				acount+=3;
+				count=1;
+			}
+			else if(arr[i]<brr[i])
+			{
+				bcount+=3;
+				count=2;
+			}
+			else
+			{
+				acount++;
+				bcount++;
+			}
+		}
+		if(acount>bcount)
+		{
+			System.out.println(acount+" "+bcount);
+			System.out.println("A");
+		}
+		else if(acount<bcount) {
+			System.out.println(acount+" "+bcount);
+			System.out.println("B");
+		}
+		else if(acount==bcount)
+		{
+			if(count==1)
+			{
+				System.out.println(acount+" "+bcount);
+				System.out.println("A");
+			}
+			else if(count==2)
+			{
+				System.out.println(acount+" "+bcount);
+				System.out.println("B");
+			}
+			else
+			{
+				System.out.println(acount+" "+bcount);
+				System.out.println("D");
+			}
+			
+		}
+		
+	}
+}
+
+/*a=3 b=3 b=3 ab=1 a=3 a=3 b=3 ab=1 ab=1 ab=1*/
