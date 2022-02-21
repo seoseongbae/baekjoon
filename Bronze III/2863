@@ -1,0 +1,40 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int [][] arr=new int [2][2];
+		
+		for(int i=0;i<2;i++)
+		{
+			for(int j=0;j<2;j++)
+			{
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		int max=0,sum=0,swap,r=0;
+		int count=-1;
+		for(int i=0;i<4;i++)
+		{
+			max=(arr[0][0]/arr[1][0])+(arr[0][1]/arr[1][1]);
+			count++;
+			if(sum<=max)
+			{
+			sum=max;
+			r=count;
+			}
+			swap=arr[0][0];
+			arr[0][0]=arr[1][0];
+			arr[1][0]=arr[1][1];
+			arr[1][1]=arr[0][1];
+			arr[0][1]=swap;
+			
+			
+		}
+		System.out.println(r);
+	}
+}
+
