@@ -1,0 +1,23 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+public class Main {
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		 BigInteger a=new BigInteger(sc.nextLine());
+		 char b=sc.nextLine().charAt(0);
+		 BigInteger c=new BigInteger(sc.nextLine());
+		 if(b=='*')
+		 {
+			 System.out.println(a.multiply(c));
+		 }
+		 else if(b=='+')
+		 {
+			 System.out.println(a.add(c));
+		 }
+		
+	}
+}
+
+
