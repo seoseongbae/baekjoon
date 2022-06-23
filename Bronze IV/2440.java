@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+import java.math.BigInteger;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		Scanner sc = new Scanner(System.in);
+
+		int num = sc.nextInt();
+
+		for (int i = 0; i < num; i++) {
+
+			for (int j = i + 1; j <= num; j++) {
+
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
